@@ -5,8 +5,8 @@ var svg = document.querySelector('svg');
 var oBack = document.querySelector('#back');
 var trangle = document.querySelector('#transformTrangle');
 
-initShape(circle);
-initShape(square);
+var circleLength = initShape(circle);
+var squareLength = initShape(square);
 
 var extremeInOutEasing = mojs.easing.path('M0, 100 C54.387239731236384, 91.3270459830493 27.041331697335025, 6.387239731236383 100, 0 ');
 
@@ -80,4 +80,6 @@ function initShape(shape){
 	shape.style.strokeDasharray = shapeLength;
 	shape.style.strokeDashoffset = shapeLength;
 	shape.style.stroke = '#fff';
+
+	return shapeLength;
 }
