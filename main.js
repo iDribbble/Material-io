@@ -5,14 +5,8 @@ var svg = document.querySelector('svg');
 var oBack = document.querySelector('#back');
 var trangle = document.querySelector('#transformTrangle');
 
-var circleLength = circle.getTotalLength();
-var squareLength = square.getTotalLength();
-
-circle.style.strokeDasharray = circleLength;
-square.style.strokeDasharray = circleLength;
-
-circle.style.strokeDashoffset = circleLength;
-square.style.strokeDashoffset = circleLength;
+initShape(circle);
+initShape(square);
 
 var extremeInOutEasing = mojs.easing.path('M0, 100 C54.387239731236384, 91.3270459830493 27.041331697335025, 6.387239731236383 100, 0 ');
 
@@ -78,3 +72,12 @@ new mojs.Tween({
 		trangle.setAttribute('points',`697 1572 843 1572 ${770 + 73*(1-extremeInOutProgress)} 1718 ${770 - 73*(1-extremeInOutProgress)} 1718`)
 	}
 }).play()
+
+function initShape(shape){
+
+	var shapeLength = shape.getTotalLength();
+
+	shape.style.strokeDasharray = shapeLength;
+	shape.style.strokeDashoffset = shapeLength;
+	shape.style.stroke = '#fff';
+}
