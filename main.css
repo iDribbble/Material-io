@@ -1,0 +1,39 @@
+html{
+	height: 100%;
+}
+
+body{
+	background-color: black;
+	height: 100%;
+}
+
+#box{
+	width: 160px;
+	height: 160px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -80px;
+	margin-top: -80px;
+}
+
+#innerBlock{
+	width: 0;
+	height: 0;
+	background-color: rgba(190,190,190,1);
+	position: absolute;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+#back{
+	width: 140px;
+	height: 140px;
+	background-color: rgba(220,220,220,1);
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -70px;
+	margin-top: -70px;
+	transform: scale(0.8);
+}
